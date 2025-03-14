@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#3F51B5"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Stage -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M20,140h160v40h-160z"/>
+    
+    <!-- Dancer 1 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,100c0,0 -5,20 -5,40h20c0,-20 -5,-40 -5,-40"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,60c-5.5,0 -10,4.5 -10,10s4.5,10 10,10s10,-4.5 10,-10s-4.5,-10 -10,-10"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M95,100c0,0 5,20 5,40h-20c0,-20 5,-40 5,-40"/>
+    
+    <!-- Dancer 2 -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M120,110c0,0 -10,10 -10,30h20c0,-20 -10,-30 -10,-30"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M120,70c-5.5,0 -10,4.5 -10,10s4.5,10 10,10s10,-4.5 10,-10s-4.5,-10 -10,-10"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M130,110c0,0 10,10 10,30h-20c0,-20 10,-30 10,-30"/>
+    
+    <!-- Spotlights -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:fillAlpha="0.3"
+        android:pathData="M80,80m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:fillAlpha="0.3"
+        android:pathData="M120,90m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+</vector>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Stage Curtains -->
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M0,0 L50,40 L50,200 L0,200 Z"/>
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M200,0 L150,40 L150,200 L200,200 Z"/>
+    
+    <!-- Stage -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M50,140h100v40h-100z"/>
+    
+    <!-- Actor 1 -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M80,90m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M80,100v20"/>
+    <path
+        android:strokeColor="#FFEB3B"
+        android:strokeWidth="2"
+        android:pathData="M80,100v20"/>
+    <path
+        android:strokeColor="#FFEB3B"
+        android:strokeWidth="2"
+        android:pathData="M80,110h-10"/>
+    <path
+        android:strokeColor="#FFEB3B"
+        android:strokeWidth="2"
+        android:pathData="M80,110h10"/>
+    
+    <!-- Actor 2 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M120,90m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M120,100v20"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M120,100v20"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M120,110h-10"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M120,110h10"/>
+    
+    <!-- Spotlight -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:fillAlpha="0.3"
+        android:pathData="M100,100m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Stage Props -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M60,130h20v10h-20z"/>
+    <path
+        android:fillColor="#795548"
+        android:pathData="M130,125l-10,15h20z"/>
+</vector>

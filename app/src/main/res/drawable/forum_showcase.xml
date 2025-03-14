@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#E8F5E9"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Artist Portfolio -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,30h140v100h-140z"/>
+    
+    <!-- Artist Profile -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M50,50a15,15 0,1 0,0 30a15,15 0,1 0,0 -30z"/>
+    
+    <!-- Artist Name and Bio -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,50h70v5h-70z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,60h50v3h-50z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,68h60v3h-60z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,76h40v3h-40z"/>
+    
+    <!-- Artwork Thumbnails -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M40,100h30v20h-30z"/>
+    <path
+        android:fillColor="#4DB6AC"
+        android:pathData="M85,100h30v20h-30z"/>
+    <path
+        android:fillColor="#7986CB"
+        android:pathData="M130,100h30v20h-30z"/>
+    
+    <!-- Like and Comment Section -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M40,140l5,5l5,-5l-5,-5z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M55,140h20v3h-20z"/>
+    
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M90,140a3,3 0,1 0,0 6a3,3 0,1 0,0 -6z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M100,140h20v3h-20z"/>
+    
+    <!-- Comments -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,155h120v30h-120z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M50,165h100v3h-100z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M50,173h80v3h-80z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M50,181h90v3h-90z"/>
+</vector>

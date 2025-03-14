@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#673AB7"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Stage -->
+    <path
+        android:fillColor="#311B92"
+        android:pathData="M20,140h160v40h-160z"/>
+    
+    <!-- Piano -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M40,110h80v30h-80z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M50,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M53,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M58,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M61,110h5v20h-5z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M71,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M74,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M79,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M82,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M87,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,110h5v20h-5z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M95,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M100,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M103,110h5v20h-5z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M108,110h3v20h-3z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M111,110h5v20h-5z"/>
+    
+    <!-- Musician -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M70,80m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M70,90v20"/>
+    <path
+        android:strokeColor="#FFEB3B"
+        android:strokeWidth="2"
+        android:pathData="M70,90v20"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M60,100h20v10h-20z"/>
+    
+    <!-- Music Notes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,70m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M135,70v-15"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M150,90m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M155,90v-15"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M140,50m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M145,50v-15"/>
+</vector>

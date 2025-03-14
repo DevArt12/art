@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#263238"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Camera -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M60,70h80v50h-80z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M90,60h20v10h-20z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M70,80h60v30h-60z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M100,95a10,10 0,1 0,0 20a10,10 0,1 0,0 -20z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M100,100a5,5 0,1 0,0 10a5,5 0,1 0,0 -10z"/>
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M130,75a5,5 0,1 0,0 10a5,5 0,1 0,0 -10z"/>
+    
+    <!-- Tripod -->
+    <path
+        android:fillColor="#757575"
+        android:pathData="M100,120v30"/>
+    <path
+        android:strokeColor="#757575"
+        android:strokeWidth="2"
+        android:pathData="M100,120v30"/>
+    <path
+        android:fillColor="#757575"
+        android:pathData="M100,150 L80,170 L120,170 Z"/>
+    <path
+        android:strokeColor="#757575"
+        android:strokeWidth="2"
+        android:pathData="M100,150 L80,170"/>
+    <path
+        android:strokeColor="#757575"
+        android:strokeWidth="2"
+        android:pathData="M100,150 L120,170"/>
+    
+    <!-- Light Flashes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.7"
+        android:pathData="M40,40 L60,60 L40,60 L60,80 L40,80 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.7"
+        android:pathData="M160,40 L140,60 L160,60 L140,80 L160,80 Z"/>
+    
+    <!-- Photo Frame -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,130h40v30h-40z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M135,135h30v20h-30z"/>
+    
+    <!-- Photo Frame -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,120h40v40h-40z"/>
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M25,125h30v30h-30z"/>
+</vector>

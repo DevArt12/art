@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#E8EAF6"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Auction Stage -->
+    <path
+        android:fillColor="#C5CAE9"
+        android:pathData="M40,120h120v40h-120z"/>
+    
+    <!-- Podium -->
+    <path
+        android:fillColor="#5C6BC0"
+        android:pathData="M80,100h40v20h-40z"/>
+    
+    <!-- Auctioneer -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M100,80a8,8 0,1 0,0 16a8,8 0,1 0,0 -16z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M100,96v24"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M100,96v24"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M100,105h-10"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M100,105h10"/>
+    
+    <!-- Auction Hammer -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M110,90h20v5h-20z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M130,85h10v15h-10z"/>
+    
+    <!-- Artwork Being Auctioned -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,60h30v40h-30z"/>
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M65,65h20v30h-20z"/>
+    
+    <!-- Auction Attendees -->
+    <path
+        android:fillColor="#616161"
+        android:pathData="M50,140a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M50,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M50,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M50,160h10"/>
+    
+    <path
+        android:fillColor="#616161"
+        android:pathData="M80,140a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M80,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M80,152v18"/>
+    
+    <path
+        android:fillColor="#616161"
+        android:pathData="M120,140a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M120,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M120,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M120,160h10"/>
+    
+    <path
+        android:fillColor="#616161"
+        android:pathData="M150,140a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M150,152v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M150,152v18"/>
+    
+    <!-- Auction Paddle -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M130,155h10v10h-10z"/>
+    <path
+        android:fillColor="#795548"
+        android:pathData="M135,165v10"/>
+    <path
+        android:strokeColor="#795548"
+        android:strokeWidth="2"
+        android:pathData="M135,165v10"/>
+    
+    <!-- Price Display -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,50h40v20h-40z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M135,55h30v10h-30z"/>
+</vector>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ArtGallery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <!-- Enable Material Motion -->
+        <item name="motionDurationLong1">300</item>
+        <item name="motionDurationMedium1">225</item>
+        <item name="motionDurationShort1">175</item>
+        <!-- Customize bottom sheet -->
+        <item name="bottomSheetDialogTheme">@style/Theme.ArtGallery.BottomSheetDialog</item>
+        <!-- Surface colors -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorError">@color/dark_error</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+
+    <style name="Theme.ArtGallery.BottomSheetDialog" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.ArtGallery.BottomSheet</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.ArtGallery.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.ArtGallery.LargeComponent</item>
+        <item name="behavior_peekHeight">80dp</item>
+        <item name="behavior_fitToContents">true</item>
+        <item name="backgroundTint">@color/dark_surface</item>
+    </style>
+
+    <style name="Widget.ArtGallery.Chip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/dark_chip_background_color</item>
+        <item name="android:textColor">@color/dark_chip_text_color</item>
+        <item name="rippleColor">@color/dark_chip_ripple_color</item>
+    </style>
+</resources>

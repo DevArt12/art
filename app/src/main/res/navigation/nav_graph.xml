@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_gallery">
+
+    <fragment
+        android:id="@+id/navigation_gallery"
+        android:name="com.example.artgallery.ui.gallery.GalleryFragment"
+        android:label="Gallery" />
+
+    <fragment
+        android:id="@+id/navigation_artists"
+        android:name="com.example.artgallery.ui.artists.ArtistsFragment"
+        android:label="Artists" />
+
+    <fragment
+        android:id="@+id/navigation_ar_studio"
+        android:name="com.example.artgallery.ui.ar.ARModelSelectionFragment"
+        android:label="@string/ar_studio_title">
+        <action
+            android:id="@+id/action_navigation_ar_studio_to_ARViewFragment"
+            app:destination="@id/ARViewFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ARViewFragment"
+        android:name="com.example.artgallery.ui.ar.ARViewFragment"
+        android:label="AR View">
+        <argument
+            android:name="modelId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_market"
+        android:name="com.example.artgallery.ui.market.MarketFragment"
+        android:label="Market" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.artgallery.ui.news.NewsFragment"
+        android:label="News" />
+        
+    <fragment
+        android:id="@+id/navigation_tutorial"
+        android:name="com.example.artgallery.ui.tutorial.TutorialFragment"
+        android:label="Art Classes &amp; Tutorials">
+        <action
+            android:id="@+id/actionNavigationTutorialToTutorialDetailFragment"
+            app:destination="@id/tutorialDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/tutorialDetailFragment"
+        android:name="com.example.artgallery.ui.tutorial.TutorialDetailFragment"
+        android:label="Tutorial Details">
+        <argument
+            android:name="tutorialId"
+            app:argType="long" />
+        <action
+            android:id="@+id/actionTutorialDetailToQuizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.artgallery.ui.tutorial.QuizFragment"
+        android:label="Quiz">
+        <argument
+            android:name="tutorialId"
+            app:argType="long" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/navigation_performance"
+        android:name="com.example.artgallery.ui.performance.PerformanceFragment"
+        android:label="Performance Hub">
+        <action
+            android:id="@+id/actionNavigationPerformanceToPerformanceDetailFragment"
+            app:destination="@id/performanceDetailFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/performanceDetailFragment"
+        android:name="com.example.artgallery.ui.performance.PerformanceDetailFragment"
+        android:label="Performance Details">
+        <argument
+            android:name="performanceId"
+            app:argType="long" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/navigation_forum"
+        android:name="com.example.artgallery.ui.forum.ForumFragment"
+        android:label="Community Forum">
+        <action
+            android:id="@+id/actionNavigationForumToPostDetailFragment"
+            app:destination="@id/postDetailFragment" />
+        <action
+            android:id="@+id/actionNavigationForumToNewPostFragment"
+            app:destination="@id/newPostFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="com.example.artgallery.ui.forum.NewPostFragment"
+        android:label="New Post" />
+    
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.example.artgallery.ui.forum.PostDetailFragment"
+        android:label="Post Details">
+        <argument
+            android:name="postId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_edit"
+            app:destination="@id/newPostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_event"
+        android:name="com.example.artgallery.ui.event.EventFragment"
+        android:label="Event Calendar">
+        <action
+            android:id="@+id/actionNavigationEventToEventDetailFragment"
+            app:destination="@id/eventDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.example.artgallery.ui.event.EventDetailFragment"
+        android:label="Event Details">
+        <argument
+            android:name="eventId"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme colors -->
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="dark_error">#FFCF6679</color>
+
+    <!-- Chip colors -->
+    <color name="chip_text_color">@color/black</color>
+    <color name="chip_ripple_color">#1F000000</color>
+    <color name="dark_chip_background_color">@color/purple_200</color>
+    <color name="dark_chip_text_color">@color/black</color>
+    <color name="dark_chip_ripple_color">#1FFFFFFF</color>
+    
+    <!-- AR Studio colors -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorAccent">@color/purple_500</color>
+    <color name="colorDownloadProgress">@color/teal_200</color>
+    <color name="colorDownloadComplete">@color/teal_700</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorWarning">#FFC107</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorOverlay">#80000000</color>
+    <color name="colorCardBackground">#F5F5F5</color>
+    <color name="colorButtonBackground">@color/purple_500</color>
+    <color name="colorButtonText">@color/white</color>
+    
+    <!-- Additional colors -->
+    <color name="colorPrimary">@color/purple_500</color>
+    <color name="colorPrimaryDark">@color/purple_700</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorOnSecondary">@color/black</color>
+    <color name="colorDivider">#EEEEEE</color>
+    <color name="black_overlay">#80000000</color>
+    
+    <!-- Forum colors -->
+    <color name="colorLiked">#F44336</color>
+    <color name="colorUnliked">#757575</color>
+    
+    <!-- Event colors -->
+    <color name="attending_green">#4CAF50</color>
+    
+    <!-- Tutorial colors -->
+    <color name="colorBeginner">#4CAF50</color>
+    <color name="colorIntermediate">#FFC107</color>
+    <color name="colorAdvanced">#F44336</color>
+    
+    <!-- Shimmer colors -->
+    <color name="shimmer_placeholder">#DDDDDD</color>
+</resources>

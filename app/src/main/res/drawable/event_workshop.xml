@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#FFFDE7"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Workshop Table -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M30,100h140v20h-140z"/>
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M40,120v30h10v-30z"/>
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M150,120v30h10v-30z"/>
+    
+    <!-- Art Supplies -->
+    <!-- Paintbrushes -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M50,90h30v5h-30z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M80,90 L90,95 L90,90 L80,85 Z"/>
+    
+    <!-- Paint Tubes -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M100,85h10v15h-10z"/>
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M115,85h10v15h-10z"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M130,85h10v15h-10z"/>
+    
+    <!-- Canvas -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,60h40v30h-40z"/>
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M45,65h30v20h-30z"/>
+    
+    <!-- Instructor -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M150,60a8,8 0,1 0,0 16a8,8 0,1 0,0 -16z"/>
+    <path
+        android:fillColor="#212121"
+        android:pathData="M150,76v24"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M150,76v24"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M150,85h-10"/>
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M150,85h10"/>
+    
+    <!-- Students -->
+    <path
+        android:fillColor="#616161"
+        android:pathData="M60,130a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M60,142v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M60,142v18"/>
+    
+    <path
+        android:fillColor="#616161"
+        android:pathData="M100,130a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M100,142v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M100,142v18"/>
+    
+    <path
+        android:fillColor="#616161"
+        android:pathData="M140,130a6,6 0,1 0,0 12a6,6 0,1 0,0 -12z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M140,142v18"/>
+    <path
+        android:strokeColor="#616161"
+        android:strokeWidth="2"
+        android:pathData="M140,142v18"/>
+    
+    <!-- Easel -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M90,40 L80,100 L70,100 L80,40 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M110,40 L120,100 L130,100 L120,40 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M80,50h40v5h-40z"/>
+</vector>

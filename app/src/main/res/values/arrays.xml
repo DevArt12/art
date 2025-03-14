@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="artwork_categories">
+        <item>Painting</item>
+        <item>Sculpture</item>
+        <item>Photography</item>
+        <item>Digital Art</item>
+        <item>Mixed Media</item>
+        <item>Drawing</item>
+        <item>Printmaking</item>
+        <item>Textile Art</item>
+        <item>Ceramics</item>
+        <item>Other</item>
+    </string-array>
+</resources>

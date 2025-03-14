@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,0h200v200h-200z"/>
+    
+    <!-- Table -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M40,120h120v10h-120z"/>
+    <path
+        android:fillColor="#6D4C41"
+        android:pathData="M50,130v30h10v-30z"/>
+    <path
+        android:fillColor="#6D4C41"
+        android:pathData="M140,130v30h10v-30z"/>
+    
+    <!-- Sculpture Base -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M80,110h40v10h-40z"/>
+    
+    <!-- Sculpture -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M90,50h20v60h-20z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M85,70h30v10h-30z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M100,30a10,10 0,1 0,0 20a10,10 0,1 0,0 -20z"/>
+    
+    <!-- Sculpting Tools -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M30,80h20v5h-20z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M50,80 L60,85 L60,80 L50,75 Z"/>
+    
+    <path
+        android:fillColor="#795548"
+        android:pathData="M30,95h15v3h-15z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M45,95 L55,98 L55,95 L45,92 Z"/>
+    
+    <path
+        android:fillColor="#795548"
+        android:pathData="M150,80h20v5h-20z"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M150,80 L140,85 L140,80 L150,75 Z"/>
+    
+    <!-- Clay pieces -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M150,100a10,5 0,1 0,0 10a10,5 0,1 0,0 -10z"/>
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M160,105a8,4 0,1 0,0 8a8,4 0,1 0,0 -8z"/>
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M145,110a6,3 0,1 0,0 6a6,3 0,1 0,0 -6z"/>
+</vector>

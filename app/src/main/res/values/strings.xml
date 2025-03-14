@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Art Gallery</string>
+    <string name="play">Play</string>
+    <string name="download">Download</string>
+    
+    <!-- Navigation -->
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_artists">Artists</string>
+    <string name="nav_market">Market</string>
+    <string name="nav_news">News</string>
+    
+    <!-- Actions -->
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_choose_image">Choose Image</string>
+    <string name="action_share">Share</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_undo">Undo</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Dialog Titles -->
+    <string name="title_add_artwork">Add New Artwork</string>
+    <string name="title_edit_artwork">Edit Artwork</string>
+    <string name="title_add_artist">Add New Artist</string>
+    <string name="title_edit_artist">Edit Artist</string>
+    <string name="title_add_news">Add News</string>
+    <string name="title_edit_news">Edit News</string>
+    
+    <!-- Form Labels -->
+    <string name="label_title">Title</string>
+    <string name="label_description">Description</string>
+    <string name="label_price">Price (₹)</string>
+    <string name="label_price_hint">Enter price in Indian Rupees</string>
+    <string name="label_for_sale">For Sale</string>
+    <string name="label_contact">Contact Details</string>
+    <string name="label_artist_name">Artist Name</string>
+    <string name="label_bio">Biography</string>
+    <string name="label_news_content">News Content</string>
+    
+    <!-- Messages -->
+    <string name="msg_fill_required">Please fill all required fields</string>
+    <string name="msg_valid_price">Please enter a valid price greater than 0</string>
+    <string name="msg_enter_price">Please enter the price</string>
+    <string name="msg_enter_contact">Please enter contact details for sale items</string>
+    <string name="msg_artwork_added">Artwork added successfully</string>
+    <string name="msg_artwork_updated">Artwork updated successfully</string>
+    <string name="msg_artwork_deleted">Artwork deleted</string>
+    <string name="msg_artwork_saved">Artwork saved successfully</string>
+    <string name="msg_undo">Undo</string>
+    <string name="msg_select_image">Please select an image</string>
+    <string name="msg_error_loading">Error loading data</string>
+    <string name="msg_viewing">Viewing: %1$s</string>
+    <string name="msg_permissions_required">Permissions are required to select images</string>
+    <string name="msg_title_required">Title is required</string>
+    <string name="msg_description_required">Description is required</string>
+    <string name="msg_invalid_price">Please enter a valid price</string>
+    <string name="msg_error_saving_artwork">Error saving artwork</string>
+    <string name="msg_error_loading_artworks">Error loading artworks</string>
+    <string name="msg_no_more_artworks">No more artworks to load</string>
+    <string name="msg_loading_more">Loading more artworks...</string>
+    
+    <!-- Error Messages -->
+    <string name="error_loading_image">Failed to load image</string>
+    <string name="error_saving_artwork">Failed to save artwork</string>
+    <string name="error_required_field">This field is required</string>
+    <string name="error_image_required">Please select an image for your artwork</string>
+    <string name="error_network">Network error. Please check your connection</string>
+    <string name="error_database">Database error. Please try again</string>
+    
+    <!-- Image Source -->
+    <string name="source_camera">Take Photo</string>
+    <string name="source_gallery">Choose from Gallery</string>
+    
+    <!-- Permissions -->
+    <string name="permission_required">Permissions required to select images</string>
+    
+    <!-- Content Descriptions -->
+    <string name="artwork_image_desc">Artwork Image</string>
+    <string name="toggle_view">Toggle view mode</string>
+    <string name="no_artworks_found">No artworks found</string>
+    <string name="add_first_artwork">Add Your First Artwork</string>
+    
+    <!-- Filter -->
+    <string name="filter_artworks">Filter Artworks</string>
+    <string name="search_artworks">Search artworks</string>
+    <string name="categories">Categories</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="add_artwork">Add Artwork</string>
+    
+    <!-- AR Studio -->
+    <string name="ar_studio_title">AR Interactive Studio</string>
+    <string name="ar_studio_subtitle">Bring art into your space with augmented reality</string>
+    <string name="ar_model_thumbnail">AR Model Thumbnail</string>
+    <string name="view_in_ar">View in AR</string>
+    <string name="back">Back</string>
+    <string name="reset">Reset</string>
+    <string name="remove_model">Remove Model</string>
+    <string name="tracking_status">Tracking Status</string>
+    <string name="ar_tracking_lost">Tracking lost. Move your device slowly.</string>
+    <string name="ar_tracking_limited">Limited tracking. Scan your environment.</string>
+    <string name="ar_instruction_tap_to_place">Tap on a flat surface to place the model</string>
+    <string name="ar_instruction_model_placed">Model placed. You can move, rotate, or scale it.</string>
+    <string name="no_models_found">No Models Found</string>
+    <string name="no_models_found_message">Try selecting a different category or check your downloads</string>
+    <string name="all">All</string>
+    <string name="sculptures">Sculptures</string>
+    <string name="paintings">Paintings</string>
+    <string name="installations">Installations</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="ar_permission_required">Camera permission is required for AR functionality</string>
+    
+    <!-- Additional AR Studio Strings -->
+    <string name="ar_select_horizontal_surface">Please select a horizontal surface</string>
+    <string name="ar_select_model_first">Please select a model first</string>
+    <string name="ar_model_not_downloaded">Model not downloaded. Please download it first.</string>
+    <string name="ar_model_file_not_found">Model file not found</string>
+    <string name="ar_error_loading_model">Error loading model: %1$s</string>
+    <string name="ar_model_placed_instructions">Use two fingers to resize or rotate the model</string>
+    <string name="ar_downloading">Downloading…</string>
+    <string name="ar_download_complete">Download complete</string>
+    <string name="ar_download_failed">Download failed</string>
+    <string name="ar_no_model_selected">No model selected</string>
+    <string name="ar_storage_permission_required">Storage permission is required to download models</string>
+    <string name="ar_delete_model_confirmation">Are you sure you want to delete this model?</string>
+    <string name="ar_delete_model_success">Model deleted successfully</string>
+    <string name="ar_category_filter">Filter by category</string>
+    <string name="ar_model_size">Size: %1$s</string>
+    <string name="ar_total_downloaded_size">Total downloaded: %1$s</string>
+    <string name="ar_free_space">Free space: %1$s</string>
+    <string name="ar_insufficient_space">Insufficient storage space</string>
+    <string name="ar_search_hint">Search models</string>
+    <string name="ar_sort_by_name">Sort by name</string>
+    <string name="ar_sort_by_size">Sort by size</string>
+    <string name="ar_sort_by_date">Sort by date</string>
+    
+    <!-- New AR strings for updated functionality -->
+    <string name="tap_on_surface_to_place">Tap on a flat surface to place the model</string>
+    <string name="model_not_found">Model not found</string>
+    <string name="model_not_downloaded">Model not downloaded</string>
+    <string name="model_file_not_found">Model file not found</string>
+    <string name="model_still_loading">Model is still loading</string>
+    <string name="tracking_limited">Limited tracking. Move your device slowly.</string>
+    <string name="tracking_lost">Tracking lost. Point at a flat surface.</string>
+    <string name="download_complete">Download complete!</string>
+    <string name="download_failed">Download failed: %1$s</string>
+    <string name="download_model_first">Please download the model first</string>
+    <string name="no_downloaded_models">No Downloaded Models</string>
+    <string name="download_models_message">Download some models to view them in AR</string>
+    <string name="no_models_available">No Models Available</string>
+    <string name="check_back_later">Check back later for new models</string>
+    <string name="no_models_in_category">No Models in %1$s Category</string>
+    <string name="try_different_category">Try selecting a different category</string>
+    <string name="characters">Characters</string>
+    <string name="furniture">Furniture</string>
+    <string name="abstract_art">Abstract</string>
+    
+    <!-- Event Calendar Strings -->
+    <string name="event_calendar">Event Calendar</string>
+    <string name="exhibitions">Exhibitions</string>
+    <string name="workshops">Workshops</string>
+    <string name="openings">Openings</string>
+    <string name="auctions">Auctions</string>
+    <string name="performances">Performances</string>
+    <string name="lectures">Lectures</string>
+    <string name="filter_by_date">Filter by Date</string>
+    <string name="attending_only">Attending Only</string>
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="no_events_found">No events found</string>
+    <string name="no_events_available">No Events Available</string>
+    <string name="add_event">Add Event</string>
+    <string name="free_admission">Free Admission</string>
+    <string name="ticket_price_format">₹%1$s</string>
+    <string name="attending">Attending</string>
+    
+    <!-- Reminder Dialog Strings -->
+    <string name="reminder_options">Reminder Options</string>
+    <string name="reminder_15_min">15 minutes before</string>
+    <string name="reminder_30_min">30 minutes before</string>
+    <string name="reminder_1_hour">1 hour before</string>
+    <string name="reminder_3_hours">3 hours before</string>
+    <string name="reminder_6_hours">6 hours before</string>
+    <string name="reminder_12_hours">12 hours before</string>
+    <string name="reminder_1_day">1 day before</string>
+    <string name="reminder_2_days">2 days before</string>
+    <string name="reminder_1_week">1 week before</string>
+    <string name="custom_reminder_time">Set custom reminder time</string>
+    <string name="select_custom_date_time">Select custom date and time</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    
+    <!-- Event Detail Strings -->
+    <string name="event_image">Event Image</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="location">Location</string>
+    <string name="organizer">Organizer</string>
+    <string name="event_full">Event is Full</string>
+    <string name="description">Description</string>
+    <string name="share_event">Share Event</string>
+    <string name="add_to_calendar">Add to Calendar</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="contact_organizer">Contact Organizer</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="event_added_to_calendar">Event added to calendar</string>
+    <string name="event_calendar_error">Error adding event to calendar</string>
+    <string name="event_shared">Event shared</string>
+    <string name="event_share_error">Error sharing event</string>
+    <string name="event_directions_error">Error getting directions</string>
+    <string name="event_contact_error">Error contacting organizer</string>
+    <string name="event_tickets_error">Error buying tickets</string>
+    <string name="event_tickets_url_not_found">Ticket URL not found</string>
+    <string name="event_location_not_found">Location not found</string>
+    <string name="event_organizer_not_found">Organizer contact not found</string>
+    <string name="event_calendar_permission_required">Calendar permission required</string>
+    <string name="event_reminder_set">Reminder set for %1$s</string>
+    <string name="event_reminder_error">Error setting reminder</string>
+    <string name="event_reminder_removed">Reminder removed</string>
+    <string name="event_reminder_remove_error">Error removing reminder</string>
+    <string name="event_reminder_already_set">Reminder already set</string>
+    <string name="event_reminder_not_set">No reminder set</string>
+    <string name="event_reminder_set_for">Reminder set for %1$s</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="website">Website</string>
+    <string name="attend">Attend</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="share">Share</string>
+    
+    <!-- Forum Strings -->
+    <string name="no_posts_available">No Posts Available</string>
+    <string name="be_first_to_post">Be the first to post in this forum</string>
+    <string name="create_new_post">Create New Post</string>
+    <string name="comments">Comments</string>
+    <string name="write_a_comment">Write a comment...</string>
+    <string name="post">Post</string>
+    
+    <!-- Tutorial Strings -->
+    <string name="art_classes_and_tutorials">Art Classes and Tutorials</string>
+    <string name="search_tutorials">Search tutorials</string>
+    <string name="painting">Painting</string>
+    <string name="drawing">Drawing</string>
+    <string name="sculpture">Sculpture</string>
+    <string name="digital">Digital</string>
+    <string name="mixed_media">Mixed Media</string>
+    <string name="all_levels">All Levels</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="all_tutorials">All Tutorials</string>
+    <string name="no_tutorials_found">No Tutorials Found</string>
+    <string name="download_to_watch">Download to Watch</string>
+    <string name="completed_badge">Completed Badge</string>
+    <string name="materials_needed">Materials Needed</string>
+    <string name="your_progress">Your Progress</string>
+    <string name="update_progress">Update Progress</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="tutorial_thumbnail">Tutorial Thumbnail</string>
+    <string name="continue_learning">Continue Learning</string>
+    
+    <!-- Comment Strings -->
+    <string name="edited">Edited</string>
+    <string name="replyCount">%d replies</string>
+    <string name="reply">Reply</string>
+    
+    <!-- Performance Strings -->
+    <string name="no_downloaded_performances">No Downloaded Performances</string>
+    <string name="download_performances_message">Download performances to watch offline</string>
+    <string name="no_performances_available">No Performances Available</string>
+    <string name="no_performances_in_category">No Performances in This Category</string>
+    <string name="performance_not_found">Performance not found</string>
+    <string name="video_not_available">Video not available</string>
+    
+    <!-- Event Strings -->
+    <string name="event_not_found">Event not found</string>
+    <string name="attendees_count">%d attending</string>
+    <string name="attendees_count_unlimited">Unlimited attendance</string>
+    <string name="unattend">Unattend</string>
+    <string name="marked_as_attending">Marked as attending</string>
+    <string name="unmarked_as_attending">Unmarked as attending</string>
+    <string name="edit_reminder">Edit Reminder</string>
+    <string name="remove_reminder">Remove Reminder</string>
+    <string name="date_range_filter">Date Range Filter</string>
+    <string name="no_attending_events">No Attending Events</string>
+    <string name="mark_events_to_attend">Mark events to attend</string>
+    <string name="no_events_in_category_date_range">No events in this category and date range</string>
+    <string name="try_different_filters">Try different filters</string>
+    <string name="no_events_in_date_range">No events in this date range</string>
+    <string name="try_different_date_range">Try a different date range</string>
+    <string name="no_events_in_category">No events in this category</string>
+    <string name="marked_attending">Marked as attending</string>
+    <string name="unmarked_attending">Unmarked as attending</string>
+    
+    <!-- Forum Strings -->
+    <string name="no_posts_in_category">No posts in this category</string>
+    <string name="be_first_to_post_category">Be the first to post in this category</string>
+    <string name="action_retry">Retry</string>
+    <string name="completed">Completed</string>
+    <string name="next_question">Next Question</string>
+    <string name="finish_quiz">Finish Quiz</string>
+    <string name="save">Save</string>
+</resources>
