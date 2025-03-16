@@ -159,3 +159,103 @@ class ForumFragment : Fragment(), ForumPostAdapter.ForumPostClickListener {
         return this.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
     }
 }
+package com.example.artgallery.ui.forum
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.artgallery.adapter.ForumPostAdapter
+import com.example.artgallery.data.entity.ForumPost
+import com.example.artgallery.databinding.FragmentForumBinding
+import com.example.artgallery.viewmodel.ForumViewModel
+import com.google.android.material.tabs.TabLayout
+
+class ForumFragment : Fragment() {
+    private var _binding: FragmentForumBinding? = null
+    private val binding get() = _binding!!
+    private val viewModel: ForumViewModel by viewModels()
+    private lateinit var adapter: ForumPostAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentForumBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupViews()
+        observeData()
+    }
+
+    private fun setupViews() {
+        setupTabLayout()
+        setupRecyclerView()
+        setupFab()
+    }
+
+    private fun setupTabLayout() {
+        binding.tabLayout.apply {
+            addTab(newTab().setText("General"))
+            addTab(newTab().setText("Techniques"))
+            addTab(newTab().setText("Critique"))
+            addTab(newTab().setText("Events"))
+            
+            addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab) {
+                    viewModel.setCategory(getCategoryForTab(tab.position))
+                }
+                override fun onTabUnselected(tab: TabLayout.Tab?) {}
+                override fun onTabReselected(tab: TabLayout.Tab?) {}
+            })
+        }
+    }
+
+    private fun setupRecyclerView() {
+        adapter = ForumPostAdapter(::onPostClicked)
+        binding.rvPosts.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = this@ForumFragment.adapter
+        }
+    }
+
+    private fun setupFab() {
+        binding.fabNewPost.setOnClickListener {
+            showNewPostDialog()
+        }
+    }
+
+    private fun observeData() {
+        viewModel.posts.observe(viewLifecycleOwner) { posts ->
+            adapter.submitList(posts)
+        }
+    }
+
+    private fun getCategoryForTab(position: Int): String = when(position) {
+        0 -> ForumPost.CATEGORY_GENERAL
+        1 -> ForumPost.CATEGORY_TECHNIQUES
+        2 -> ForumPost.CATEGORY_CRITIQUE
+        3 -> ForumPost.CATEGORY_EVENTS
+        else -> ForumPost.CATEGORY_GENERAL
+    }
+
+    private fun onPostClicked(post: ForumPost) {
+        // Navigate to post details
+    }
+
+    private fun showNewPostDialog() {
+        // Show dialog to create new post
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
