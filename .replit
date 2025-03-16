@@ -11,8 +11,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "./gradlew clean"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./gradlew assembleDebug"
+args = "export JAVA_HOME=\"/nix/store/$(ls -t /nix/store | grep -m 1 openjdk)/\"; ./gradlew clean; ./gradlew assembleDebug"
