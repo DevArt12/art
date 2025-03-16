@@ -19,7 +19,8 @@ import com.example.artgallery.data.entity.*
         Event::class,
         ForumPost::class,
         ForumComment::class,
-        ARModel::class
+        ARModel::class,
+        MarketItem::class //Added MarketItem entity
     ],
     version = 2,
     exportSchema = false
@@ -34,6 +35,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun forumPostDao(): ForumPostDao
     abstract fun forumCommentDao(): ForumCommentDao
     abstract fun arModelDao(): ARModelDao
+    abstract fun marketDao(): MarketDao //Added MarketDao
 
     companion object {
         @Volatile
@@ -121,6 +123,18 @@ abstract class AppDatabase : RoomDatabase() {
                         isDownloaded INTEGER NOT NULL DEFAULT 0
                     )
                 """)
+
+                database.execSQL("""
+                    CREATE TABLE IF NOT EXISTS market_items (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                        title TEXT NOT NULL,
+                        description TEXT NOT NULL,
+                        price REAL NOT NULL,
+                        imageUrl TEXT NOT NULL,
+                        artistId INTEGER NOT NULL,
+                        FOREIGN KEY(artistId) REFERENCES artists(id) ON DELETE CASCADE
+                    )
+                """)
             }
         }
 
@@ -133,48 +147,6 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                 .addMigrations(MIGRATION_1_2)
                 .build()
-                INSTANCE = instance
-                instance
-            }
-        }
-    }
-}
-package com.example.artgallery.data
-
-import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.example.artgallery.data.entity.*
-
-@Database(
-    entities = [
-        Artist::class,
-        Artwork::class,
-        Performance::class,
-        Tutorial::class,
-        ForumPost::class,
-        Event::class
-    ],
-    version = 2,
-    exportSchema = false
-)
-abstract class AppDatabase : RoomDatabase() {
-    abstract fun artistDao(): ArtistDao
-    abstract fun artworkDao(): ArtworkDao
-    abstract fun performanceDao(): PerformanceDao
-
-    companion object {
-        @Volatile
-        private var INSTANCE: AppDatabase? = null
-
-        fun getDatabase(context: Context): AppDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java,
-                    "art_gallery_database"
-                ).build()
                 INSTANCE = instance
                 instance
             }
