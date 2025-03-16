@@ -41,19 +41,3 @@ data class Performance(
         const val CATEGORY_MIXED_MEDIA = "mixed_media"
     }
 }
-package com.example.artgallery.data.entity
-
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
-@Entity(tableName = "performances")
-data class Performance(
-    @PrimaryKey(autoGenerate = true)
-    val id: Long = 0,
-    val title: String,
-    val description: String,
-    val videoPath: String,
-    val artistId: Long,
-    val duration: Int,
-    val category: String
-)

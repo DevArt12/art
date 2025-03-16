@@ -12,6 +12,11 @@
     <color name="dark_background">#FF121212</color>
     <color name="dark_surface">#FF1E1E1E</color>
     <color name="dark_error">#FFCF6679</color>
+    
+    <!-- Missing colors needed by the app -->
+    <color name="primary">@color/purple_500</color>
+    <color name="primary_dark">@color/purple_700</color>
+    <color name="accent">@color/purple_200</color>
 
     <!-- Chip colors -->
     <color name="chip_text_color">@color/black</color>

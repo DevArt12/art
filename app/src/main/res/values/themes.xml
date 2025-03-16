@@ -44,9 +44,9 @@
         <item name="android:textColor">@color/chip_text_color</item>
         <item name="rippleColor">@color/chip_ripple_color</item>
     </style>
-</resources>
-<resources>
-    <style name="Theme.ArtGallery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    
+    <!-- Theme definition that was in the second resources tag -->
+    <style name="Theme.ArtGallery.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
