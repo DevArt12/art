@@ -1,27 +1,26 @@
+
 package com.example.artgallery.ui.market
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.artgallery.R
 import com.example.artgallery.adapter.ArtworkAdapter
-import com.example.artgallery.data.entity.Artwork
 import com.example.artgallery.databinding.FragmentMarketBinding
 import com.example.artgallery.model.ArtworkFilter
 import com.example.artgallery.ui.dialog.ArtworkDetailsDialogFragment
 import com.example.artgallery.ui.dialog.ArtworkEditDialogFragment
-import com.example.artgallery.ui.gallery.FilterBottomSheetFragment
 import com.example.artgallery.viewmodel.ArtworkViewModel
+import com.google.android.material.chip.Chip
 
 class MarketFragment : Fragment() {
     private var _binding: FragmentMarketBinding? = null
     private val binding get() = _binding!!
     private val viewModel: ArtworkViewModel by viewModels()
     private lateinit var artworkAdapter: ArtworkAdapter
-
+    
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,45 +33,84 @@ class MarketFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
-        setupFilterButton()
+        setupFilterChips()
+        setupSortingSpinner()
+        setupSearchView()
         observeArtworks()
+        setupFab()
     }
 
     private fun setupRecyclerView() {
         artworkAdapter = ArtworkAdapter(
             onItemClick = { artwork ->
-                // Show artwork details
                 ArtworkDetailsDialogFragment.newInstance(artwork)
                     .show(childFragmentManager, "artwork_details")
             },
             onEditClick = { artwork ->
-                // Show edit dialog
                 ArtworkEditDialogFragment.newInstance(artwork)
                     .show(childFragmentManager, "edit_artwork")
             },
             onDeleteClick = { artwork ->
-                // Delete artwork
                 viewModel.deleteArtwork(artwork)
             }
         )
-
+        
         binding.rvArtworks.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = artworkAdapter
         }
     }
 
-    private fun setupFilterButton() {
-        binding.fabFilter.setOnClickListener {
-            FilterBottomSheetFragment { filter ->
-                viewModel.applyFilter(filter)
-            }.show(childFragmentManager, "FilterBottomSheet")
+    private fun setupFilterChips() {
+        val categories = listOf("Paintings", "Sculptures", "Digital", "Photography", "Other")
+        categories.forEach { category ->
+            val chip = Chip(requireContext()).apply {
+                text = category
+                isCheckable = true
+                setOnCheckedChangeListener { _, isChecked ->
+                    viewModel.updateFilter(category, isChecked)
+                }
+            }
+            binding.chipGroupCategories.addView(chip)
+        }
+    }
+
+    private fun setupSortingSpinner() {
+        binding.spinnerSort.setOnItemSelectedListener { position ->
+            when (position) {
+                0 -> viewModel.sortByPrice(ascending = true)
+                1 -> viewModel.sortByPrice(ascending = false)
+                2 -> viewModel.sortByDate(newest = true)
+                3 -> viewModel.sortByPopularity()
+            }
+        }
+    }
+
+    private fun setupSearchView() {
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                viewModel.searchArtworks(query.orEmpty())
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                viewModel.searchArtworks(newText.orEmpty())
+                return true
+            }
+        })
+    }
+
+    private fun setupFab() {
+        binding.fabAddArtwork.setOnClickListener {
+            ArtworkEditDialogFragment.newInstance(null)
+                .show(childFragmentManager, "new_artwork")
         }
     }
 
     private fun observeArtworks() {
         viewModel.filteredArtworks.observe(viewLifecycleOwner) { artworks ->
-            artworkAdapter.submitList(artworks.filter { it.isForSale })
+            artworkAdapter.submitList(artworks)
+            binding.tvNoResults.visibility = if (artworks.isEmpty()) View.VISIBLE else View.GONE
         }
     }
 
