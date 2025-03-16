@@ -81,6 +81,22 @@ class PerformanceDetailFragment : Fragment() {
     }
     
     private fun setupVideoPlayer() {
+        binding.videoView.apply {
+            setOnPreparedListener { mp ->
+                mp.setOnVideoSizeChangedListener { _, _, _ ->
+                    // Adjust video aspect ratio
+                    val videoRatio = mp.videoWidth / mp.videoHeight.toFloat()
+                    val screenRatio = width / height.toFloat()
+                    val scale = if (videoRatio > screenRatio) {
+                        width / mp.videoWidth.toFloat()
+                    } else {
+                        height / mp.videoHeight.toFloat()
+                    }
+                    scaleX = scale
+                    scaleY = scale
+                }
+            }
+        }
         // Create media controller
         mediaController = MediaController(requireContext())
         mediaController?.setAnchorView(binding.videoView)
