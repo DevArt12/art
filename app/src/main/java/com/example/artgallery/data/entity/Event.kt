@@ -38,3 +38,24 @@ data class Event(
         const val CATEGORY_LECTURE = "lecture"
     }
 }
+package com.example.artgallery.data.entity
+
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+@Entity(tableName = "events")
+data class Event(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val title: String,
+    val description: String,
+    val startDate: Long,
+    val endDate: Long,
+    val location: String,
+    val category: String,
+    val thumbnailPath: String,
+    val isReminded: Boolean = false
+) : Parcelable

@@ -48,3 +48,34 @@ data class ForumPost(
         const val CATEGORY_COLLABORATION = "collaboration"
     }
 }
+package com.example.artgallery.data.entity
+
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+@Entity(
+    tableName = "forum_posts",
+    foreignKeys = [
+        ForeignKey(
+            entity = Artist::class,
+            parentColumns = ["id"],
+            childColumns = ["authorId"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ]
+)
+data class ForumPost(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val title: String,
+    val content: String,
+    val authorId: Long,
+    val timestamp: Long,
+    val category: String,
+    val likes: Int = 0,
+    val isPendingSync: Boolean = false
+) : Parcelable

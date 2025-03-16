@@ -50,3 +50,24 @@ data class Tutorial(
         const val DIFFICULTY_ADVANCED = "advanced"
     }
 }
+package com.example.artgallery.data.entity
+
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+@Entity(tableName = "tutorials")
+data class Tutorial(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val title: String,
+    val description: String,
+    val videoPath: String,
+    val category: String,
+    val duration: Int,
+    val instructorName: String,
+    val thumbnailPath: String,
+    val isDownloaded: Boolean = false
+) : Parcelable

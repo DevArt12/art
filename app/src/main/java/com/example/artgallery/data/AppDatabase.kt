@@ -151,9 +151,12 @@ import com.example.artgallery.data.entity.*
     entities = [
         Artist::class,
         Artwork::class,
-        Performance::class
+        Performance::class,
+        Tutorial::class,
+        ForumPost::class,
+        Event::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
