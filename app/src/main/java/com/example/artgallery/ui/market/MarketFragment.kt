@@ -58,6 +58,47 @@ class MarketFragment : Fragment() {
         binding.rvArtworks.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = artworkAdapter
+            addOnScrollListener(object : RecyclerView.OnScrollListener() {
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    val layoutManager = recyclerView.layoutManager as GridLayoutManager
+                    val visibleItemCount = layoutManager.childCount
+                    val totalItemCount = layoutManager.itemCount
+                    val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
+
+                    if (!viewModel.isLoading.value!! && !viewModel.isLastPage) {
+                        if (visibleItemCount + firstVisibleItemPosition >= totalItemCount
+                            && firstVisibleItemPosition >= 0
+                        ) {
+                            viewModel.loadNextPage()
+                        }
+                    }
+                }
+            })
+        }
+
+        binding.swipeRefresh.setOnRefreshListener {
+            viewModel.refreshArtworks()
+            binding.swipeRefresh.isRefreshing = false
+        }
+    }
+
+    private fun setupSortingSpinner() {
+        val sortOptions = arrayOf("Latest", "Price: Low to High", "Price: High to Low", "Most Popular")
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, sortOptions)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        
+        binding.spinnerSort.adapter = adapter
+        binding.spinnerSort.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when (position) {
+                    0 -> viewModel.sortByDate()
+                    1 -> viewModel.sortByPrice(ascending = true)
+                    2 -> viewModel.sortByPrice(ascending = false)
+                    3 -> viewModel.sortByPopularity()
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
 
