@@ -14,3 +14,21 @@ data class Artist(
     val bio: String,
     val profilePicturePath: String
 ) : Parcelable
+package com.example.artgallery.data.entity
+
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+@Entity(tableName = "artists")
+data class Artist(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val name: String,
+    val biography: String,
+    val profileImage: String,
+    val specialization: String,
+    val contactInfo: String
+) : Parcelable

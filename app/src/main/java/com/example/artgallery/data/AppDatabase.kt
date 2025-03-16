@@ -139,3 +139,42 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 }
+package com.example.artgallery.data
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.example.artgallery.data.entity.*
+
+@Database(
+    entities = [
+        Artist::class,
+        Artwork::class,
+        Performance::class
+    ],
+    version = 1,
+    exportSchema = false
+)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun artistDao(): ArtistDao
+    abstract fun artworkDao(): ArtworkDao
+    abstract fun performanceDao(): PerformanceDao
+
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getDatabase(context: Context): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "art_gallery_database"
+                ).build()
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+}
