@@ -3,12 +3,3 @@ channel = "stable-24_05"
 
 [workflows]
 runButton = "Run"
-
-[[workflows.workflow]]
-name = "Run"
-author = 40565401
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "export JAVA_HOME=\"/nix/store/$(ls -t /nix/store | grep -m 1 openjdk)/\"; ./gradlew clean; ./gradlew assembleDebug"
