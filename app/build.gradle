@@ -86,8 +86,11 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation "androidx.palette:palette-ktx:1.0.0"
     implementation 'com.google.ar:core:1.40.0'
-    implementation 'io.github.sceneview:sceneview:1.2.6'
-    implementation 'io.github.sceneview:arsceneview:1.2.6'
+    implementation 'io.github.sceneview:sceneview:2.0.2'
+    implementation 'io.github.sceneview:arsceneview:2.0.2'
+    implementation 'com.google.android.filament:filament-android:1.40.0'
+    implementation 'com.google.android.filament:filament-utils-android:1.40.0'
+    implementation 'com.google.android.filament:gltfio-android:1.40.0'
     implementation 'com.google.android.filament:filament-android:1.36.0'
     implementation 'com.google.android.filament:filament-utils-android:1.36.0'
     implementation 'com.google.android.filament:gltfio-android:1.36.0'

@@ -77,19 +77,61 @@ class ARViewFragment : Fragment() {
     
     private fun setupARScene() {
         sceneView.apply {
-            // Set up plane detection
-            planeRenderer.isEnabled = true
+            // Configure AR session
+            session?.configure { config ->
+                config.depthMode = Config.DepthMode.AUTOMATIC
+                config.instantPlacementMode = Config.InstantPlacementMode.LOCAL_Y_UP
+                config.focusMode = Config.FocusMode.AUTO
+                config.planeFindingMode = Config.PlaneFindingMode.HORIZONTAL_AND_VERTICAL
+            }
             
-            // Set up instructions
+            // Enable plane detection with custom styling
+            planeRenderer.isEnabled = true
+            planeRenderer.isShadowReceiver = true
+            
+            // Enable instructions
             instructions.enabled = true
             
-            // Set up camera controls
+            // Configure camera
             cameraController.enabled = true
+            cameraController.enableRotation = true
+            cameraController.enableZoom = true
         }
+        
+        // Set up lifecycle management
+        lifecycle.addObserver(sceneView)
     }
     
     private fun loadSelectedModel() {
-        // Get the model ID from navigation arguments
+        lifecycleScope.launch {
+            try {
+                val modelUri = args.modelUri?.let { Uri.parse(it) }
+                modelNode = ArModelNode(sceneView.engine, PlacementMode.INSTANT).apply {
+                    loadModelGlbAsync(
+                        glbFileLocation = modelUri,
+                        autoAnimate = true,
+                        scaleToUnits = 1.0f,
+                        centerOrigin = Position(x = 0.0f, y = 0.0f, z = 0.0f)
+                    )
+                    onAnchorChanged = { anchor ->
+                        // Handle placement
+                        if (anchor != null) {
+                            sceneView.planeRenderer.isVisible = false
+                        }
+                    }
+                }
+                sceneView.addChild(modelNode!!)
+                
+                // Enable tap to place
+                sceneView.setOnTouchListener { _, motionEvent ->
+                    modelNode?.anchor()
+                    true
+                }
+            } catch (e: Exception) {
+                Toast.makeText(context, "Failed to load AR model: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
         val modelId = args.modelId
         
         // Show loading indicator
